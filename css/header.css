@@ -1,0 +1,124 @@
+.header-background {
+    background-color: #9dddfe;
+    background-image: url(../assets/images/panda-bg-img.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 700px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-top: 12px;
+}
+
+.logo {
+    margin-right: 57px;
+}
+
+.header nav ul{
+    display: flex;
+}
+
+.header nav ul li{
+    margin-right: 35px;
+    text-transform: capitalize;
+}
+
+.header nav ul li a{
+    font-family: 'RobotoMedium';
+    font-size: 18px;
+}
+
+.header nav ul li a:hover{
+    text-shadow: #70CB0E 1px 1px 0, #70CB0E -1px -1px 0, 
+    #70CB0E -1px 1px 0, #70CB0E 1px -1px 0;
+}
+
+.header nav ul li:first-child a{
+    text-shadow: #70CB0E 1px 1px 0, #70CB0E -1px -1px 0, 
+    #70CB0E -1px 1px 0, #70CB0E 1px -1px 0;
+    cursor: auto;
+}
+
+
+
+@media screen and (max-width: 1215px) {
+
+    .header-background {
+        background-position: 48% 80%;
+    }
+}
+
+
+@media screen and (max-width: 670px) {
+
+    .header-background {
+        background-position: 61% 12px;
+    }
+
+    .header {
+        justify-content: space-between;
+    }
+
+    .logo {
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    
+    .header {
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .header nav ul {
+        display: flex;
+        flex-direction: column;
+        background-color: #A7E1FF;
+        width: 300px;
+        height: 302px;
+        padding: 40px;
+    }
+    
+    header nav .header-nav {
+        display: none;
+        position: absolute;
+        right: 0%;
+        top: 0%;
+    }
+
+    .header nav ul li:first-child {
+        margin-right: 0px;
+        margin-top: 0px;
+        padding: 20px 0px;
+    }
+
+    .header nav ul li:nth-child(2) {
+        margin-top: 0px;
+    }
+
+    .header nav ul li {
+        margin-top: 20px;
+    }
+
+    .header nav ul li a{
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    
+    .header {
+        padding-top: 12px;       
+    }
+
+    .header-background {
+        background-position: 54%;
+    }
+    
+}
+

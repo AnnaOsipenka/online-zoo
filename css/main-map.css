@@ -1,0 +1,393 @@
+.zoom {
+    max-width: 1920px;
+    height: calc(100vh - 72px);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #9dddfe;
+}
+
+
+.container-bg-map-main {
+    background-color: #A7E1FF;
+}
+
+.map-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.map-img {
+    width: 100%;
+    height: auto;
+}
+
+.map {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    /* transform: translate(-50% -50%); */
+    /* width: 100%; */
+    /* margin-top: 106px; */
+    padding-bottom: 100px;
+}
+
+.container-animal-information {
+    position: absolute;
+    display: flex;
+    align-items: center;
+}
+
+.container-animal-information .animal-information {
+    text-align: center;
+    font-size: 16px;
+    line-height: 19px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 10px;
+}
+
+.container-animal-information .tooltip {
+    border: 4px solid transparent;
+    border-radius: 50%;
+    font-size: 0;
+}
+
+.container-animal-information .tooltip:hover {
+    border: 4px solid #70CB0E;
+    cursor: pointer;
+}
+
+.container-animal-information .tooltip:hover ~ .animal-information {
+    background-color: #70CB0E;
+}
+
+.container-animal-information  .tooltip:hover ~ .animal-information::before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-right: 8px solid #70CB0E;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid transparent;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 66px;
+}
+
+
+.container-animal-information:first-of-type .tooltip:hover ~ .animal-information::before {
+    transform: translateY(-50%) rotate(180deg);
+    left: 100px;
+}
+
+.container-animal-information .tooltip:hover ~ .animal-information > span
+ {
+    display: flex;
+}
+
+
+.container-animal-information:first-of-type .animal-information {
+    order: -1;
+    margin-left: 0;
+    margin-right: 10px;
+    max-width: 100px;
+}
+
+.animal-information > span {
+    display: none;
+}
+
+.eagle {
+    left: calc(50% - 121px/2 - 524.5px);
+    top: calc(50% - 64px/2 + 0.5px);
+}
+
+.eagle a {
+    order: 2;
+}
+
+.eagle div {
+    order: 1;
+}
+
+.alligator {
+    top: calc(50% - 93px / 2 + 25px);
+    left: calc(50% - 161px / 2 - 202.5px);;
+}
+
+.gorilla {
+    top: calc(50% - 136px/2 + 147px);
+    left: calc(50% - 64px/2 + 102.5px);
+}
+
+.panda {
+    left: calc(50% - 124px/2 + 400px);
+    top: calc(50% - 64px/2 + 14.5px);
+}
+
+.country-usa {
+    position: absolute;
+    left: calc(50% - 31px/2 - 363.5px);
+    top: calc(50% - 19px/2 + -36px);
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.country-china {
+    position: absolute;
+    left: calc(50% - 41px/2 + 273.5px);
+    top: calc(50% - 19px/2 + -22px);
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.country-drs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: calc(50% - 61px/2 - 38.5px);
+    top: calc(50% - 42px/2 + 122.5px);
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.btn-hidden {
+    max-width: 147px;
+    height: 40px;
+    background-color: #FFB600;
+    padding:  4px 20px;
+    font-size:  18px;
+    display: none;
+}
+
+.btn-hidden:hover {
+    background-color: #f5c95a;
+}
+
+/* .container-zoom {
+    position: absolute;
+    right: 20px;
+    bottom: 12%;
+} */
+
+.btn-zoom {
+    position: absolute;
+    right: 60px;
+    bottom: 60px;
+    padding: 20px 10px 10px;
+    display: flex;
+    border: none;
+    z-index: 2;
+}
+
+/* <div class="wrapper" id="wrapper">
+    <img src="Map.png" alt="map" class="map" id="map">
+    <button class="button" id="zoomIn">+</button>
+    <button class="button" id="zoomOut">-</button>
+  </div>
+ */
+ /* .wrapper {
+    height: calc(100vh - 400px);
+    position: relative;
+    overflow: hidden;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .map {
+    position: static;
+    width: 100%;
+  }
+  
+  .button {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    bottom: 20px;
+    z-index: 2;
+  }
+  
+  #zoomIn {
+    right: 60px;
+  }
+  
+  #zoomOut {
+    right: 20px;
+  } */
+  
+  
+.btn-zoom:hover {
+    cursor: pointer;
+}
+
+.btn-zoom:focus {
+    outline: none;
+}
+
+.minus {
+    padding: 19px 15px;
+    border-top: 1px solid black;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.plus {
+    bottom: 99px;
+    padding: 19px 15px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.minus:before,
+.plus:before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 12px;
+    background-color: black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.plus::after {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 12px;
+    background-color: black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%) rotate(90deg);
+}
+
+#zoom {
+    width: 100%;
+    height: 100%;
+    transform-origin: 0px 0px;
+    transform: scale(1) translate(0px, 0px);
+    cursor: grab;
+  }
+
+
+  @media screen and (max-width: 1190px) {
+    
+    .container-animal-information .tooltip:hover ~ .animal-information > a,
+    .container-animal-information .animal-information:hover * {
+        display: flex;
+    }
+
+.container-animal-information  .animal-information:hover::before  {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-right: 8px solid #70CB0E;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid transparent;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 66px;
+}
+
+
+.container-animal-information  .animal-information:hover {
+    background-color: #70CB0E;
+}
+
+    .btn-visible {        
+        background-color: #FFB600;
+        width: 147px;
+        height: 40px;
+        text-transform: none;
+        margin-top: 4px;
+    }
+
+    .container-bg-map-main {
+        overflow: hidden;
+    }
+
+    .map {
+        width: 640px;
+        min-height: 800px;
+        padding: 0;
+        margin-top: 10px;
+    }
+      
+    .map-img {
+        position: absolute;
+        width: 933px;
+        height: 600px;
+        top: 100px;
+        right: -145px;
+    }
+
+    .eagle {
+        left: calc(50% - 121px/2 - 444.5px);
+        top: calc(50% - 64px/2 + 33.5px);
+    }
+
+    .alligator {
+        top: calc(50% - 93px / 2 + 49px);
+        left: calc(50% - 161px / 2 - 145.5px);
+    }
+
+    .gorilla {
+        top: calc(50% - 136px/2 + 152px);
+        left: calc(50% - 64px/2 + 86.5px);
+    }
+
+    .panda {
+        left: calc(50% - 124px/2 + 330px);
+        top: calc(50% - 64px/2 + 33.5px);
+    }
+
+    .country-drs {
+        top: calc(50% - 42px/2 + 148.5px);
+    }
+
+    .country-china {
+        left: calc(50% - 41px/2 + 218.5px);
+        top: calc(50% - 19px/2 + 24px);
+    }
+
+    .country-usa {
+        left: calc(50% - 31px/2 - 294.5px);
+        top: calc(50% - 19px/2 + 6px);
+    }
+
+
+    .container-zoom {
+        right: 23px;
+        bottom: 13%;
+    }
+}
+
+
+@media screen and (max-width: 330px) {
+
+    .map-img {
+        right: -106px;
+    }
+
+    .alligator {
+        left: calc(50% - 161px / 2 - 183.5px);
+    }
+    
+    .country-drs {
+        left: calc(50% - 61px/2 - 78.5px);
+    }
+
+}

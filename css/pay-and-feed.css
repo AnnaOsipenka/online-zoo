@@ -1,0 +1,113 @@
+.pay-and-feed {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.pay-and-feed h2{
+    text-align: center;
+}
+
+.container-tips {
+    background-image: url(../assets/icons/arrows.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 57%;
+    max-width: 1053px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+}
+
+.tip {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tip p {
+    max-width: 320px;
+    text-align: center;
+    line-height: 19px;
+    margin-top: -5px;
+}
+
+
+@media screen and (max-width: 1150px) {
+
+    .tip {
+        max-width: 260px;
+    }
+    
+    .tip p {
+        max-width: 190px;
+    }
+
+
+    .container-top-tips {
+        display: flex;
+        margin-bottom: 20px;
+    }
+
+    .container-tips {
+        max-width: 535px;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap; 
+    } 
+
+    .container-tips {
+        background-image: url(../assets/icons/arrows-top.svg);
+        background-repeat: no-repeat;
+        background-position-y: -93px;
+        background-position-x: 66px;
+        padding-top: 20px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    
+    .tip {
+        margin-right: 0;
+    }
+
+    .pay-and-feed {
+        margin-top: 120px;
+    }
+}
+
+@media screen and (max-width: 570px) {
+
+    .container-tips {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container-top-tips {
+        flex-direction: column;
+    }
+
+    .tip {
+        margin-right: 0;
+        margin-bottom: 80px;
+    }
+
+    .container-tips {
+        background-image: url(../assets/icons/arrow-straight.svg),
+                          url(../assets/icons/arrow-straight.svg);
+        background-repeat: no-repeat;
+        background-position: center 66%, center 30%;
+    }
+}
+
+@media screen and (max-width: 370px) {
+
+    .pay-and-feed {
+        margin-top: 140px;
+    }
+
+    .container-tips {
+        padding-top: 0px;
+    }
+
+}

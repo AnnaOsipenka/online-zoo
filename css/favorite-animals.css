@@ -1,0 +1,78 @@
+.favorite-animal h2 {
+    font-family: 'SceneProBlack';
+    margin-top: 140px;
+    font-size: 70px;
+    line-height: 84px;
+    letter-spacing: 2px;
+    max-width: 570px;
+    width: 100%;
+}
+
+.favorite-animal h2  span{
+    text-transform: uppercase;
+}
+
+.favorite-animal .btn {
+    margin-top: 47px;
+}
+
+.btn-icon {
+    position: relative;
+    padding-left: 33px;
+}
+
+.btn-icon::before {
+    position: absolute;
+    content: "";
+    background-image: url(../assets/icons/play.svg);
+    background-repeat: no-repeat;
+    top: 18px;
+    left: 92px;
+    width: 17px;
+    height: 18px;
+}
+
+@media screen and (max-width: 920px) {
+
+    .favorite-animal h2 {
+        margin-top: 80px;
+        font-size: 50px;
+        line-height: 60px;
+        max-width: 414px;
+    }
+
+    .favorite-animal .btn {
+        margin-top: 50px;
+        max-width: 187px;
+    }
+
+    .btn-icon::before {
+        left: 69px;
+    }
+
+}
+
+@media screen and (max-width: 620px) {
+
+    .favorite-animal h2 {
+        max-width: 220px;
+        height: 300px;
+        margin-top: 100px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .favorite-animal h2 {
+        margin-top: 80px;
+    }
+
+    .favorite-animal .btn {
+        max-width: 220px;
+    }
+
+    .btn-icon::before {
+        left: 85px;
+    }
+
+}

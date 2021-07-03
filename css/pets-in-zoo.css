@@ -1,0 +1,258 @@
+.pets-in-zoo {
+    padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-slider-ikons {
+    padding: 0 23px;
+    margin: 80px auto 47px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.slider-ikons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 27px;
+    justify-items: center;
+    align-items:center;
+}
+
+.slider-ikons li a img{
+   width: 100%;
+   height: auto;
+}
+
+.slider-ikons li {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.slider-ikons li:hover{
+    transform: scaleX(calc(253/233)) scaleY(calc(330/300));
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.slider-ikons li  .container-content-slider{
+    display: flex;
+    position: absolute;
+    padding-top: 17px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.arrow {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+}
+
+.arrow:hover {
+    cursor: pointer;
+}
+
+.arrow:focus {
+   outline: none;
+}
+
+.round-btn {
+    position: absolute;
+    top: 50%;
+    width: 63px;
+    height: 63px;
+    background-color: #FFE68E;
+    border: none;
+    border-radius: 50%;
+    border-color: #FFE68E;
+}
+
+.round-btn:first-of-type {
+    left: -63px;
+}
+
+.round-btn:last-child {
+    right: -63px;
+}
+
+.arrow::before {
+    content: url(../assets/icons/arrow.svg);
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    width: 14px;
+    height: 30px;
+}
+
+.arrow-left::before {
+    transform: translate(-50%, -50%);
+}
+
+.arrow-right::before {
+    transform: translate(-50%, -50%) rotate(-180deg);
+}
+
+.btn-favorite {
+    max-width: 286px;
+    width: 100%;
+}
+
+#wrapper {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    width: 100%;
+    max-width: 1160px;
+    position: relative;
+  }
+  
+#carousel {
+    overflow: auto;
+    max-width: 1000px;
+    margin: 0 auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+  
+#carousel::-webkit-scrollbar {
+    height: 0;
+  }
+  
+#content {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto;
+    grid-gap: 20px;
+    grid-auto-flow: column;
+    margin: auto;
+    box-sizing: border-box;
+  }
+  
+.item {
+    width: 236px;
+    height: 305px;
+    position: relative;
+  }
+.item img{
+    font-size: 0;
+}
+
+
+@media screen and (max-width: 1180px) {
+
+  
+    .cards-how-it-works {
+        justify-content: center;
+    }
+
+    .container-slider-ikons {
+        margin-bottom: 145px;
+        padding-bottom: 30px;
+    }
+
+    .round-btn:first-of-type {
+        left: 50%;
+        bottom: -65px;
+        transform: translateX(-75px);
+    }
+
+    .round-btn:last-child {
+        right: 50%;
+        bottom: -65px;
+        transform: translateX(75px);
+    }
+    
+   .slider-ikons .hidden-ikon {
+        display: none;
+    }
+
+    .slider-ikons {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+@media screen and (max-width: 650px) {
+
+    .pets-in-zoo {
+        padding: 80px 20px;
+    }
+
+    .slider-ikons li a img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    .round-btn:first-of-type {
+        bottom: -90px;
+    }
+
+    .round-btn:last-child {
+        bottom: -90px;
+    }
+
+    .container-slider-ikons {
+        margin-bottom: 140px;
+    }
+
+}
+
+
+
+@media screen and (max-width: 550px) {
+
+    .slider-ikons .hidden-ikon-mobile{
+            display: none;
+    }
+
+    .slider-ikons {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 450px) {
+
+    .slider-ikons li a img {
+        width: 100%;
+        height: 300px;
+        object-fit: fill;
+    }
+
+    .container-content-slider {
+        flex-direction: column;
+    }
+
+    .pets-in-zoo {
+        padding: 60px 10px;
+    }
+
+    .container-slider-ikons {
+        padding: 0;
+    }
+
+    .round-btn:first-of-type {
+        bottom: -91px;
+    }
+
+    .round-btn:last-child {
+        bottom: -91px;
+    }
+
+    .pets-in-zoo a {
+        max-width: 300px;
+    }
+
+    .slider-ikons li .container-content-slider {
+        padding-top: 10px;
+    }
+}

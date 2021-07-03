@@ -1,0 +1,200 @@
+@font-face { 
+    font-family: 'RobotoRegular';
+    src: url('../assets/fonts/Roboto-Regular.ttf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+    
+@font-face { 
+    font-family: 'RobotoMedium';
+    src: url('../assets/fonts/Roboto-Medium.ttf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face { 
+    font-family: 'SceneProBlack';
+    src: url('../assets/fonts/SceneProBlack.OTF') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face { 
+    font-family: 'BebasBold';
+    src: url('../assets/fonts/Bebas-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  .sr-only {
+	border: 0 !important;
+	clip: rect(1px, 1px, 1px, 1px) !important;
+	-webkit-clip-path: inset(50%) !important;
+		clip-path: inset(50%) !important;
+	height: 1px !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	padding: 0 !important;
+	position: absolute !important;
+	width: 1px !important;
+	white-space: nowrap !important;
+}
+
+.sr-only-focusable:focus,
+.sr-only-focusable:active {
+	clip: auto !important;
+	-webkit-clip-path: none !important;
+		clip-path: none !important;
+	height: auto !important;
+	margin: auto !important;
+	overflow: visible !important;
+	width: auto !important;
+	white-space: normal !important;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-weight: normal;
+    font-family: 'RobotoRegular';
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+@media screen and (max-width: 570px) {
+    
+  .wrapper {
+      padding-left: 10px;
+      padding-right: 10px;
+  }
+
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 233px;
+    width: 100%;
+    height: 51px;
+    padding: 5px 10px;
+    background-color: #70CB0E;
+    border-radius: 30px;
+    font-family: 'RobotoRegular';
+    font-size: 18px;
+    color: #000000;
+    transition: background-color .3s;
+  }
+  
+.btn:hover {
+    cursor: pointer;
+    background-color: #54990a;
+  }
+
+h2 {
+    font-family: 'RobotoMedium';
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 47px;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.lowercase {
+    text-transform: lowercase;
+}
+
+.hidden {
+  display: none;
+}
+
+.close {
+  display: none;
+  padding: 10px;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: transform .6s;
+  z-index: 1;
+}
+
+.close:hover {
+  cursor: pointer;
+  transform: rotate(180deg);       
+}
+
+.close:focus {
+  outline: none;
+}
+
+.feedback:hover {
+cursor: pointer;
+}
+
+.burger-menu {
+  background-color: transparent;
+  border: none;
+  display: none;
+  padding: 0;
+}
+
+.burger-menu:focus{
+  outline: none;
+}
+
+.burger-menu:hover{
+  cursor: pointer;
+}
+
+@media screen and (max-width: 620px) {
+  
+  .burger-menu {
+      display: block;
+      padding-top: 16px;
+  }
+
+}
+
+.show {
+  display: block !important;
+}
+
+.close-donate {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  transition: transform .6s;
+}
+
+.close-donate:hover {
+  cursor: pointer;
+  transform: rotate(180deg);       
+}
+
+
+.visible {
+  display: flex;
+}
